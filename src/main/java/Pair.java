@@ -15,6 +15,16 @@ public class Pair implements Comparable<Pair> {
         return x+y;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Pair pair = (Pair) o;
+
+        if (x != pair.x) return false;
+        return y == pair.y;
+    }
 
     @Override
     public int compareTo(Pair o) {

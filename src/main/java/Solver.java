@@ -44,8 +44,8 @@ public class Solver {
     }
 
     private boolean validPos(Application.GameSetup game, Pair pos) {
-        return pos.getX() >= 0 && pos.getX() < game.getMaxX() &&
-                pos.getY() >= 0 && pos.getY() < game.getMaxY();
+        return pos.getX() >= 0 && pos.getX() <= game.getMaxX() &&
+                pos.getY() >= 0 && pos.getY() <= game.getMaxY();
     }
 
 
